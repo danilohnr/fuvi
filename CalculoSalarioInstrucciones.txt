@@ -1,0 +1,16 @@
+Diseñar un algoritmo y luego implementarlo en lenguaje Java.
+Se le va a pedir al usuario que ingrese el monto de su salario bruto o básico.
+A partir de ese dato se le va a calcular el ingreso neto.
+El ingreso neto es igual al ingreso total menos las deducciones totales.
+El ingreso total se calcula sumando el ingreso bruto y el ingreso por antiguedad.
+El ingreso por antiguedad es igual al 15% del ingreso bruto.
+Luego calcular las deducciones totales que son:
+deducción del inss
+deducción del ir
+monto por afiliación del sindicato
+El monto por afiliación del sindicato se calcula como el 1% del ingreso bruto.
+El monto del inss se calcula como el 7% del ingreso total.
+El monto del ir se calcula como el 15.6% del ingreso total.
+Se le debe calcular la deducción a la empresa o institución, este es el
+INSS patronal y es igual al 22.5% del ingreso total del empleado.
+Imprimir el detalle de los cálculos para que el usuario vea cómo se calcula su salario neto.
