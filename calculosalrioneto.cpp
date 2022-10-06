@@ -21,7 +21,9 @@ INSS patronal y es igual al 22.5% del ingreso total del empleado.
 Imprimir el detalle de los cálculos para que el usuario vea cómo se calcula su salario neto.
 */
 #include<iostream>
+#include<iomanip>
 #include<string>
+#include<stdlib.h>
 
 using namespace std;
 //Variables globales - Constantes
@@ -40,6 +42,9 @@ int main(){
 	cin >> nombre;
 	cout << "Hola " << nombre << ", ingrese su salario básico: C$ ";
 	cin >> salarioBasico;
+	
+	system ("CLS");
+	
 	//Calcular los ingresos
 	ingresoAntiguedad = salarioBasico * (TASA_ANTIGUEDAD/100);
 	ingresoTotal = salarioBasico + ingresoAntiguedad;
@@ -53,20 +58,21 @@ int main(){
 	//Calcular las deducciones al empleador
 	montoINSSPatronal = ingresoTotal * (TASA_INSS_PATRONAL/100);
 	//Mostrar resultados
-	cout << "Nombre del empleado: " << nombre << endl;
-	cout << "Salario bruto o basico = C$" << salarioBasico << endl;
-	cout << "*****Ingresos totales******" << endl;
-	cout << "Monto por antiguedad = C$" << ingresoAntiguedad << endl;
-	cout << "Monto de ingresos totales = C$" << ingresoTotal << endl;
-	cout << "*****Deducciones totales*****" << endl;
-	cout << "Monto por sindicato = C$" << montoSindicato << endl;
-	cout << "Monto por INSS = C$" << montoINSS << endl;
-	cout << "Monto por IR = C$" << montoIR << endl;
-	cout << "Monto de deducciones totales = C$" << deduccionesTotales << endl;
-	cout << "*****Ingreso total neto*****" << endl;
-	cout << "Ingreso o salario neto = C$" << ingresoNeto << endl;
-	cout << "*****Deducciones del empleador*****" << endl;
-	cout << "Monto por INSS Patronal = C$" << montoINSSPatronal << endl;
+	cout<<"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+	//muestra de resultados
+	cout<<"hola "<<setw(5)<<nombre<<setw(15)<<"  estas son tus cuentas:"<<endl;
+	cout<<"el ingreso total es de "<<setw(10)<<right<<ingresototal<<"C$"<<endl;
+	
+	
+	cout<<"_________________________DEDUCCIONES__________________-"<<endl;
+	cout<<"tus deducciones totales son: "<<setw(8)<<right<<deduccionestotales<<"C$"<<endl;
+	cout<<setw(12)<<"correspondientes a:"<<endl;
+	cout<<"deduccion del sindicato:"<<setw(8)<<right<<montosindicato<<"C$"<<endl;
+	cout<<"deduccion del inss  :"<<setw(14)<<right<<montoinss<<"C$"<<endl;
+	cout<<"deduccion de la tasa ir:"<<setw(8)<<right<<tasair<<"C$"<<endl;
+	
+		cout<<"_________________________ingreso neto__________________-"<<endl;
+	cout<<"tu ingreso neto es igual a: "<<setw(8)<<right<<ingresoneto<<"C$"<<endl;
 	return 0;
 }
 
