@@ -93,7 +93,7 @@ int main(){
 	cout << left << setw(15) << "CARNET" << setw(40) << "NOMBRE COMPLETO" << setw(10) << "PENSUM" << setw(10) << "NOTA IP" << setw(10) << "NOTA IIP" << setw(10) << "NOTA IIIP" << setw(10) << "NOTA ACU" << setw(10) << "NOTA FINAL" << setw(11) << "OBSERVACION" << endl;
 	cout << "*********************************************************" << endl;
 	for(int i = 0; i < cantidadEstudiantes; i++){
-		cout << left << setw(15) << codigoCarnet[i] << setw(40) << nombreCompleto[i] << setw(10) << pensum << setw(10) << primerParcial[i] << setw(10) << segundoParcial[i] << setw(10) << tercerParcial[i] << setw(10) << acumulados[i] << setw(10) << notaFinal[i] << setw(11) << observacion[i] << endl;
+		cout << left << setw(15) << codigoCarnet[i] << setw(40) << nombreCompleto[i] << setw(10) << pensum << right << setw(10) << primerParcial[i] << setw(10) << segundoParcial[i] << setw(10) << tercerParcial[i] << setw(10) << acumulados[i] << setw(10) << notaFinal[i] << setw(11) << observacion[i] << endl;
 	}
 	cout << "*********************************************************" << endl;
 	cout << "Promedio del grupo: " << promedioNotas << endl;
